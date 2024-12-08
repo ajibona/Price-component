@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*,
+::after,
+::before{
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+body{
+  font-size: 15px;
+  background: var(--Very-Light-Grayish-Blue);
+  overflow-x: hidden;
+}
+
+:root{
+  --linear-gradient:hsl(236, 72%, 79%) to hsl(237, 63%, 64%);
+
+  --Very-Light-Grayish-Blue: hsl(240, 78%, 98%);
+  --Light-Grayish-Blue: hsl(234, 14%, 74%);
+  --Grayish-Blue: hsl(233, 13%, 49%);
+  --Dark-Grayish-Blue: hsl(232, 13%, 33%);
+}
+
+header{
+  margin-top: 50px;
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+header h1{
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight:700;
+  color: var(--Dark-Grayish-Blue);
+}
+
+.toogle-btn-section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.toogle-btn-section span{
+  color: var(--Light-Grayish-Blue);
+  font-weight: 700;
+}
+
+.toogle-btn{
+  width: 60px;
+  height: 30px;
+  border-radius: 20px;
+  background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+}
+
+
+.toogle-circle{
+  height: 22px;
+  width: 22px;
+  background-color: var(--Very-Light-Grayish-Blue);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  transition: all .2s ease-in-out;
+}
+
+.active{
+  right: 30px;
+}
+
+.price-list{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 40px;
+}
+
+.container{
+  min-width: 350px;
+  background-color: #fff;
+  padding-block: 30px;
+  border-radius: 12px;
+}
+
+.upper-text{
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--Very-Light-Grayish-Blue);
+  margin-inline: 20px;
+}
+
+.upper-text p{
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight:  700;
+  color: var(--Grayish-Blue)
+}
+
+.prices{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding-top: 15px;
+}
+
+.prices span{
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--Dark-Grayish-Blue);
+  height: 100%;
+}
+
+.prices h2{
+  text-align: center;
+  font-size: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: var(--Dark-Grayish-Blue);
+  
+}
+
+.down-text{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-inline: 20px;
+}
+
+.down-text span{
+  padding-block: 20px;
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
+  color: var(--Dark-Grayish-Blue);
+  border-bottom: 1px solid var(--Very-Light-Grayish-Blue);
+}
+
+.btn-learn-more, .professional-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-inline: 20px;
+}
+
+.btn-learn-more button, .professional-btn  button{
+  width: 100%;
+  padding-block: 15px;
+  text-transform: uppercase;
+  background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all .2s ease-in;
+}
+
+.btn-learn-more button:focus,
+.btn-learn-more button:focus-visible{
+  background:none;
+  outline: 1px solid var(--Dark-Grayish-Blue);
+  color: var(--Dark-Grayish-Blue);
+}
+.professional{
+  background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+}
+
+.professional .upper-text p, .professional .prices h2, .professional .down-text span, .professional .prices span{
+  color: #fff;
+}
+
+.professional .upper-text, .professional .down-text span{
+  border-bottom: 1px solid var(--Light-Grayish-Blue);
+}
+
+.professional-btn button{
+  background: #fff;
+  color: hsl(237, 63%, 64%);
+}
+
+
+.professional-btn button:focus{
+  background: transparent;
+  outline: 1px solid #fff;
+  color: #fff;
+}
+
+.svg-top{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -50px;
+  right: -180px;
+  z-index: -1;
+  float: right;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.svg-bottom{
+  display: none;
+}
+
+@media (width >= 69.3rem){
+  .price-list{
+    flex-direction: row;
+    gap: 0;
+  }
+
+  .professional{
+    padding-block: 60px;
+  }
+
+  .bg-svg{
+    width: 100%;
+    height: 100%;
+  }
+
+  .svg-top{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .svg-bottom{
+    position: absolute;
+    bottom: -150px;
+    left: 0;
+    z-index: -1;
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    display: block;
+  }
+}
